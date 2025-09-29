@@ -30,6 +30,17 @@
           "localized": true
         }
       }
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "layout.hero-section"
+      ]
     }
   }
 }
