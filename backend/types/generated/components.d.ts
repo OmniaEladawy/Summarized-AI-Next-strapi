@@ -12,6 +12,29 @@ export interface ComponentsLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsNavbarDropDown extends Struct.ComponentSchema {
+  collectionName: 'components_components_navbar_drop_downs';
+  info: {
+    displayName: 'Navbar dropDown';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'components.navbar-link', true>;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsNavbarLink extends Struct.ComponentSchema {
+  collectionName: 'components_components_navbar_links';
+  info: {
+    displayName: 'Navbar link';
+  };
+  attributes: {
+    newTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface LayoutHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_hero_sections';
   info: {
@@ -91,6 +114,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'components.link': ComponentsLink;
+      'components.navbar-drop-down': ComponentsNavbarDropDown;
+      'components.navbar-link': ComponentsNavbarLink;
       'layout.hero-section': LayoutHeroSection;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

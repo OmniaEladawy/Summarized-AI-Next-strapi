@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_navbar_drop_downs",
+  "info": {
+    "displayName": "Navbar dropDown"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "components.navbar-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

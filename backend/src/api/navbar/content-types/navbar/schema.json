@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "navbars",
+  "info": {
+    "singularName": "navbar",
+    "pluralName": "navbars",
+    "displayName": "Navbar "
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "items": {
+      "type": "dynamiczone",
+      "components": [
+        "components.navbar-link",
+        "components.navbar-drop-down"
+      ]
+    }
+  }
+}
